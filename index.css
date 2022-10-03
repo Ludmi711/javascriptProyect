@@ -1,0 +1,14 @@
+ .imagenCarrito {
+     height: 30px;
+ }
+
+ .buscador {
+     display: flex;
+     justify-content: center;
+     background-color: #fef7e1;
+     margin-top: 2px;
+ }
+
+ #inputBuscar {
+     padding: 4px 60px;
+ }
