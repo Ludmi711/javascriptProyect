@@ -11,7 +11,6 @@ var skincare = [
   new producto(2, "Protector solar", "images/protector-solar.png", 2500),
 ];
 
-
 let carrito = [];
 
 skincare.forEach((producto) => {
@@ -40,29 +39,5 @@ skincare.forEach((producto) => {
     alert("Se agrego el producto al carrito")
   );
 });
-const inputBuscar = document.getElementById("inputBuscar")
-const botonBuscar = document.getElementById("botonBuscar")
-botonBuscar.addEventListener("click", () => buscarProducto(inputBuscar.value));
-/* inputBuscar.addEventListener ("click", () => console.log(inputBuscar.value)); */
 
-const buscarProducto = (string) => {
-  console.log(string);
-  inputBuscar.value = ' '
-};
-
-
-
-/* const comprarProducto = (producto) => {
-    let productoExiste = carrito.find (item => item.id === producto.id)
-    if (productoExiste === undefined) {
-        carrito.push ({
-            producto: producto.nombre,
-            precio: producto.precio,
-            cantidad:1}
-        )
-    }else 
-productoExiste.precio = productoExiste.precio + producto.precio
-productoExiste.cantidad = producto.cantidad + 1}
-
-
-console.log(carrito); */
+localStorage.setItem("carrito", JSON.stringify(skincare));
