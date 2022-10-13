@@ -35,14 +35,29 @@ skincare.forEach((producto) => {
 `;
   content.append(productoRenderizado);
   let boton = document.getElementById(producto.id);
-  boton.addEventListener("click", () =>
-    alert("Se agrego el producto al carrito")
-  );
+  boton.addEventListener("click", () => {
+    Swal.fire(
+      '',
+      'Se agrego el producto al carrito',
+      'success'
+    );
+  });
 });
 
 localStorage.setItem("carrito", JSON.stringify(skincare));
 
 
+let botonCarrito = document.getElementById("changuito");
+
+botonCarrito.addEventListener("click", () => {
+  Swal.fire(
+    'Excelente!',
+    'Por ahora tenes los siguientes productos: ',
+
+  );
+});
+
+/* 
 const openModal = document.querySelector('.hero__cta');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
@@ -55,4 +70,4 @@ openModal.addEventListener('click', (e) => {
 closeModal.addEventListener('click', (e) => {
   e.preventDefault();
   modal.classList.remove('modal--show');
-});
+}); */
