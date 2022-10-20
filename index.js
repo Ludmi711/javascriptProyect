@@ -26,7 +26,7 @@ fetch("./data.json")
 
 
 
-
+    let carrito = []
 
 
     let boton = document.getElementById("producto.id");
