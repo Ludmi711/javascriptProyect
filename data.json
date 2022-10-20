@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "nombre": "Agua micelar",
+        "foto": "./images/agua-micelar.png",
+        "precio": 2500
+    },
+    {
+        "id": 1,
+        "nombre": "Crema hidratante",
+        "foto": "./images/crema-facial.png",
+        "precio": 3000
+    },
+    {
+        "id": 2,
+        "nombre": "Protector solar",
+        "foto": "./images/protector-solar.png",
+        "precio": 2500
+    }
+]
