@@ -2,59 +2,127 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./index.css" />
-  <!-- CSS only -->
-
-
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="app.js"></script>
 </head>
 
 <body>
-  <header class="py-5" style="background-color: #ef8e7d">
-    <div class="container px-4 px-lg-5 my-5">
-      <div class="text-center text-white">
-        <h1 class="display-4 fw-bolder">
-          Bienvenidos a Ecommerce de belleza
-        </h1>
-        <img src="./images/skin-care.png" alt="" height="60px" />
-      </div>
-    </div>
-  </header>
-  <div style="background-color: #fef7e1">
+
+    <header class="py-5" style="background-color: #ef8e7d">
+        <div class="container px-4 px-lg-5 my-5" id="header-content">
+            <div class="text-center">
+                <h1 class="display-4 fw-bolder text-center">
+                    Bienvenidos a Ecommerce de belleza
+                </h1>
+                <img src="./images/skin-care.png" alt="" height="60px" />
+            </div>
+        </div>
+
+    </header>
     <section>
-      <button id="changuito"><img src="./images/compra.png" alt="" height="40px"></button>
-  </div>
-  </section>
+        <h2 class="text-center">En esta tienda encontraras nuestros productos para comenzar con una rutina básica del
+            cuidado de la piel
+        </h2>
+        <p>La clave para una piel sana y radiante no es una rutina complicada, sino una que se adapte a tu tipo y
+            problemas de piel. Si una rutina de 10 pasos funciona para ti, entonces adelante, pero para la mayoría de
+            nosotras es demasiado complicado, caro, agotador e innecesario.
 
 
-  <section class="py-5" style="background-color: #fef7e1">
-    <div class="container px-4 px-lg-5 mt-5">
-      <div id="content" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"></div>
+
+            Cada persona tiene una piel diferente, así como diferentes problemas, preocupaciones, objetivos, etcétera.
+            Sin embargo, existen ciertas reglas de rutina de piel que generalmente se aplican en todos los ámbitos.
+
+
+
+            La mayoría de los tipos de piel generalmente pueden seguir una rutina de tres pasos por la mañana y tres por
+            la noche. Estos tres pasos básicos para una rutina de cuidado facial son: </p>
+
+        <ul>
+            <li>
+
+                <strong> Paso 1: Limpieza</strong> <br>
+
+
+
+                La regla general aquí es que lo ideal es limpiar el rostro dos veces al día, una por la mañana y otra
+                por la
+                noche. La limpieza por la mañana ayudará a eliminar cualquier rastro de sudor o aceite que quede de la
+                almohada y el cabello durante tu sueño reparador.
+
+
+
+            </li>
+            <li>
+                <strong> Paso 2: Hidratación</strong> <br>
+
+
+
+                Luego, utiliza un hidratante. Por lo general, se recomienda un hidratante sin aceite y sin fragancia, ya
+                que
+                será bien tolerado por todos los tipos de piel, desde propensos al acné hasta sensibles.
+
+
+
+            </li>
+            <li>
+                <strong> Paso 3: Protección</strong> <br>
+
+
+
+                El protector solar es tu primera línea de defensa y protección contra el cáncer de piel. Si no hicieras
+                nada
+                más por tu piel, la protección solar es lo más importante.
+
+
+
+                Opta por un protector solar con un FPS 50 y aplícalo diariamente (incluso cuando esté nublado), siempre
+                como
+                el paso final de tu rutina de cuidado de la piel.
+            </li>
+        </ul>
+
+
+    </section>
+    <h2 class="text-center">Tienda</h2>
+    <button id="boton-carrito"><img src="./images/compra.png" alt="" height="40px"><span
+            id="contadorCarrito">0</span></button>
+    <main id="contenedor-productos">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
     </div>
-  </section>
-  </div>
-  <!-- Footer-->
-  <footer class="py-5" style="background-color: #ef8e7d">
-    <div class="container">
-      <p class="m-0 text-center text-white">
-        Copyright &copy; Your Website 2022
-      </p>
-    </div>
-  </footer>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="index.js"></script>
+    <footer class="py-5" style="background-color: #ef8e7d">
+        <div class="container">
+            <p class="m-0 text-center text-white">
+                Copyright &copy; Your Website 2022
+            </p>
+        </div>
+    </footer>
 </body>
-
-
-
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
 </html>
